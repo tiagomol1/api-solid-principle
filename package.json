@@ -1,0 +1,39 @@
+{
+  "name": "solidprinciple",
+  "version": "1.0.0",
+  "description": "GymPass style app.",
+  "main": "index.js",
+  "scripts": {
+    "docker:start": "docker compose up -d",
+    "docker:stop": "docker compose down",
+    "migration:up": "npx prisma migrate dev",
+    "dev": "npm run docker:start && npm run migration:up && tsx watch src/server.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "start": "node build/server.js",
+    "build": "tsup src --out-dir build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bcryptjs": "2.4.6",
+    "@types/node": "^20.11.5",
+    "@typescript-eslint/eslint-plugin": "6.19.0",
+    "@typescript-eslint/parser": "6.19.0",
+    "dotenv": "16.3.1",
+    "eslint": "8.56.0",
+    "prisma": "5.8.1",
+    "tsup": "^8.0.1",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3",
+    "vite-tsconfig-paths": "4.3.1",
+    "vitest": "1.2.1"
+  },
+  "dependencies": {
+    "@prisma/client": "5.8.1",
+    "bcryptjs": "2.4.3",
+    "fastify": "^4.25.2",
+    "zod": "3.22.4"
+  }
+}
