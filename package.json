@@ -37,6 +37,7 @@
     "@prisma/client": "5.8.1",
     "@vitest/ui": "1.2.1",
     "bcryptjs": "2.4.3",
+    "dayjs": "1.11.10",
     "fastify": "^4.25.2",
     "zod": "3.22.4"
   }
